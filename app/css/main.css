@@ -1,0 +1,59 @@
+/* ==================================================
+   Fonts
+================================================== */
+
+/* ==================================================
+   Basic Styles
+================================================== */
+*{
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Open Sans",Arial,Helvetica Neue,sans-serif;
+  color: #706F6F;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* ==================================================
+   Colors
+================================================== */
+
+
+/* ==================================================
+    Sections
+================================================== */
+.tta-section {
+  padding: 70px 0;
+  background-color: white;
+}
+
+.sca-section h2{
+  padding: 1em 0 2.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sca-section h3 {
+  text-align: center;
+}
+
+/* ==================================================
+    Home
+================================================== */
+#home {
+
+}
