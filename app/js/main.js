@@ -19,4 +19,11 @@ jQuery(document).ready(function($){
   //   openEffect  : 'none',
   //   closeEffect : 'none'
   // });
+
+  $(".join-us-slider").nerveSlider({
+    sliderWidth: "100%",
+    sliderResizable: false
+    // More options below
+  });
+
 });

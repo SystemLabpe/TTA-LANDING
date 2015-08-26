@@ -95,8 +95,20 @@ h1 {
 }
 
 /* ==================================================
-    Section 3
+    Join us
 ================================================== */
+#join-us .message {
+  position: absolute;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#join-us .message p {
+  margin: 0;
+  font-size: 35px;
+  margin: 200px;
+  letter-spacing: 2px;
+}
 
 /* ==================================================
     Products
