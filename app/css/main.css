@@ -127,3 +127,25 @@ h1 {
 #about-us .team h3 {
   text-align: center;
 }
+
+/* ==================================================
+   Footer
+================================================== */
+#footer {
+  background-color: #474747;
+  padding: 14px 30px;
+}
+
+#footer span a {
+  color: #706F6F;
+  font-weight: bold;
+}
+
+#footer span a:hover, .footer span a:focus {
+  color: #fff;
+}
+
+#footer .social-icons i {
+  margin: 10px 12px;
+  color: #706F6F;
+}
