@@ -39,6 +39,16 @@
   #products .product .prod-desc{
     text-align: justify;
   }
+
+/* ==================================================
+    About-us
+================================================== */
+
+  #about-us .team-tta {
+    padding: 70px 70px;
+  }
+
+
 }
 
 @media (max-width: 1200px) {
@@ -63,3 +73,4 @@
   column-count:         1;
   }
 }
+
