@@ -10,6 +10,8 @@ gulpif = require('gulp-if'),
 minifyCss = require('gulp-minify-css'),
 useref = require('gulp-useref'),
 uglify = require('gulp-uglify'),
+imagemin = require('gulp-imagemin'),
+pngquant = require('imagemin-pngquant'),
 historyApiFallback = require('connect-history-api-fallback');
 
 // Servidor web de desarrollo
@@ -90,18 +92,32 @@ gulp.task('compress', function() {
   .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('img-optimize',function(){
+  return gulp.src('./app/img/**')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('./dist/img'));
+});
+
 // Copia el contenido de los estáticos e index.html al directorio
 // de producción sin tags de comentarios
 gulp.task('copy', function() {
   gulp.src('./app/index.html')
   .pipe(useref())
   .pipe(gulp.dest('./dist'));
+  gulp.src('./app/css/icons/**')
+  .pipe(gulp.dest('./dist/css/icons'));
   gulp.src('./app/fonts/**')
   .pipe(gulp.dest('./dist/fonts'));
   gulp.src('./app/lib/font-awesome/fonts/**')
   .pipe(gulp.dest('./dist/fonts'));
-  gulp.src('./app/img/**')
-  .pipe(gulp.dest('./dist/img'));
+  // gulp.src('./app/img/**')
+  // .pipe(gulp.dest('./dist/img'));
+  gulp.src('./app/php/**')
+  .pipe(gulp.dest('./dist/php'));
 });
 
 // Vigila cambios que se produzcan en el código
@@ -114,4 +130,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['server', 'inject', 'wiredep', 'watch']);
-gulp.task('build', ['compress', 'copy']);
+gulp.task('build', ['compress','img-optimize','copy']);

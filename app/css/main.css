@@ -1,6 +1,15 @@
 /* ==================================================
    Fonts
 ================================================== */
+@font-face {
+  font-family: 'Cabiar'; /*a name to be used later*/
+  src: url('../fonts/CaviarDreams.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'CabiarBold'; /*a name to be used later*/
+  src: url('../fonts/CaviarDreams_Bold.ttf'); /*URL to font*/
+}
 
 /* ==================================================
    Basic Styles
@@ -16,8 +25,9 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans",Arial,Helvetica Neue,sans-serif;
+  font-family: Cabiar,Georgia;
   color: #706F6F;
+  font-size: 16px;
 }
 
 ul {
@@ -44,21 +54,27 @@ h1 {
     Sections
 ================================================== */
 .tta-section {
-  padding: 70px 0;
+  padding-bottom: 70px;
   background-color: white;
 }
 
 .tta-section h2{
-  padding: 1em 0 2.5em;
+  font-size: 30px;
+  padding: 1em 0 1.6em;
+  font-family: 'CabiarBold', serif;
+  margin: 0;
   text-align: center;
-  font-weight: bold;
+}
+
+.tta-section h3{
+  font-size: 28px;
 }
 
 /* ==================================================
     Home
 ================================================== */
-#home {
-  min-height: 800px;
+/*#home {
+  min-height: 600px;
   background-image: url('../img/bg-home-2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -66,6 +82,9 @@ h1 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}*/
+#home {
+  padding: 0 !important;
 }
 
 #home .logo img{
@@ -97,6 +116,26 @@ h1 {
 /* ==================================================
     Join us
 ================================================== */
+#join-us .tta-photos {
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+#join-us .tta-photos img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+#join-us .join-us-slider {
+  z-index: -99999;
+}
+
+
 #join-us .message {
   position: absolute;
   color: #FFFFFF;
@@ -113,19 +152,85 @@ h1 {
 /* ==================================================
     Products
 ================================================== */
-#products .product .img-product {
+#products .product {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#products .product.product-right{
+  text-align: right;
+}
+
+#products .product.product-left{
+  text-align: left;
+}
+
+#products .product .prod-img {
   margin: 0 auto;
+}
+
+/* ==================================================
+  Compensation
+================================================== */
+#compensation p.medium {
+  text-align: center;
+}
+
+#compensation .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+#compensation .video-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ==================================================
     About-us
 ================================================== */
+#about-us p.medium {
+  font-size: 24px;
+}
+
 #about-us .team .logo-team {
   margin: 0 auto;
 }
 
-#about-us .team h3 {
-  text-align: center;
+#about-us .team .logo {
+  min-height: 240px;
+}
+
+#about-us .team p {
+  text-align: justify;
+}
+#about-us .dot {
+  font-size: 18px;
+}
+
+#about-us .dot img {
+  max-width: 20px;
+  margin-right: 8px;
+}
+
+/* ==================================================
+   Footer
+================================================== */
+#contact .column {
+  margin-bottom: 20px;
+}
+#tta-contact #contact-submit {
+  background-color: #002A5C;
+  color: #FFFFFF;
+}
+
+#tta-contact #contact-submit:hover, #tta-contact #contact-submit:focus {
+  background-color: #5584BB;
 }
 
 /* ==================================================
