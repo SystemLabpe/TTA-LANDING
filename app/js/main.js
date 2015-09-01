@@ -1,5 +1,32 @@
 "use strict";
 
+var wow = new WOW(
+  {
+    boxClass:     'wow',
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       150,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true       // act on asynchronously loaded content (default is true)
+    // callback:     function(box) {
+    //   switch(box.id){
+    //     case 'video1':
+    //       video1.play();
+    //       break;
+    //     case 'video3':
+    //       video3.play();
+    //       break;
+    //     case 'video5':
+    //       video5.play();
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    //   video1.play();
+    // }
+  }
+);
+wow.init();
+
 function initMap() {
   var location_1 = new google.maps.LatLng(-12.091729, -77.003827);
   var location_2 = new google.maps.LatLng(-12.090793,-77.058296);
@@ -7,12 +34,12 @@ function initMap() {
   var location_4 = new google.maps.LatLng(-12.098767, -77.057831);
   var location_5 = new google.maps.LatLng(-12.114796, -76.981396);
   var location_6 = new google.maps.LatLng(-12.115262, -77.046447);
-  var center = new google.maps.LatLng(-12.1091448,-77.0088176);
+  var center = new google.maps.LatLng(-12.0999736,-77.0144617);
 
   var mapOptions = {
-    zoom: 13,
+    zoom: 12,
     center: center
-  }
+  };
 
   var map = new google.maps.Map(document.getElementById("location"), mapOptions);
 
@@ -94,24 +121,6 @@ function initMap() {
 }
 
 jQuery(document).ready(function($){
-  // $(".product-fancybox").fancybox({
-  //   helpers : {
-  //     overlays : {
-  //       css : {
-  //         'background' : 'rgba(58, 42, 45, 0.95)'
-  //       }
-  //     }
-  //   },
-  //   maxWidth  : 800,
-  //   maxHeight : 600,
-  //   fitToView : false,
-  //   width   : '70%',
-  //   height    : '70%',
-  //   autoSize  : false,
-  //   closeClick  : false,
-  //   openEffect  : 'none',
-  //   closeEffect : 'none'
-  // });
 
   $(".home-slider").nerveSlider({
     sliderWidth: "100%",
@@ -122,7 +131,7 @@ jQuery(document).ready(function($){
     showDots: false
   });
 
-    $("#contact-submit").on('click',function() {
+  $("#contact-submit").on('click',function() {
     var $contact_form = $('#tta-contact');
     var fields = $contact_form.serialize();
 
