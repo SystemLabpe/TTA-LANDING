@@ -209,11 +209,18 @@ h1 {
 #about-us .team p {
   text-align: justify;
 }
-#about-us .dot {
+
+#about-us .why-tta {
+  background-color: #18315A;
+  color: #FFFFFF;
+  padding: 50px 0;
+}
+
+#about-us .why-tta .dot {
   font-size: 18px;
 }
 
-#about-us .dot img {
+#about-us .why-tta .dot img {
   max-width: 20px;
   margin-right: 8px;
 }
