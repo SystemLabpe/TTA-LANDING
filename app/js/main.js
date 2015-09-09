@@ -3,26 +3,10 @@
 var wow = new WOW(
   {
     boxClass:     'wow',
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       150,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true       // act on asynchronously loaded content (default is true)
-    // callback:     function(box) {
-    //   switch(box.id){
-    //     case 'video1':
-    //       video1.play();
-    //       break;
-    //     case 'video3':
-    //       video3.play();
-    //       break;
-    //     case 'video5':
-    //       video5.play();
-    //       break;
-    //     default:
-    //       break;
-    //   }
-    //   video1.play();
-    // }
+    animateClass: 'animated',
+    offset:       100,
+    mobile:       true,
+    live:         true
   }
 );
 wow.init();
@@ -129,6 +113,22 @@ jQuery(document).ready(function($){
     showTimer: false,
     showArrows: false,
     showDots: false
+  });
+
+  $(".video-fancybox").fancybox();
+  $(".fancybox").fancybox({
+    padding    : 0,
+    margin     : 5,
+    autoCenter : false,
+    afterLoad  : function () {
+      $.extend(this, {
+          aspectRatio : false,
+          type    : 'html',
+          width   : '100%',
+          height  : '100%',
+          content : '<div class="fancybox-image" style="background-image:url(' + this.href + '); background-size: cover; background-position:50% 50%;background-repeat:no-repeat;height:100%;width:100%;" /></div>'
+      });
+    }
   });
 
   $("#contact-submit").on('click',function() {

@@ -35,6 +35,23 @@ ul {
   list-style: none;
 }
 
+ul.custom-dots li{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 8px;
+}
+
+ul.custom-dots li img{
+  width: 25px;
+  height: 17px;
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
 a, a:hover, a:focus {
   text-decoration: none;
 }
@@ -45,10 +62,32 @@ h1 {
   text-align: center;
 }
 
-/* ==================================================
-   Colors
-================================================== */
+p.medium {
+  font-size: 24px;
+}
 
+#fancybox-close {
+  top: 0;
+  right: -40px;
+}
+
+/* ==================================================
+   Videos
+================================================== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* ==================================================
     Sections
@@ -86,7 +125,42 @@ h1 {
 }*/
 #home {
   padding: 0 !important;
+  /*height: 800px;*/
 }
+
+/*.home-slider.ns_nerveSlider {
+  position: absolute;
+  z-index: -9999;
+}
+
+.home-slider .ns_slideContent {
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-slider .ns_slideContent.bg-1 {
+  background-image: url('../img/home/evolucion-de-vida.jpg');
+}
+
+.home-slider .ns_slideContent.bg-2 {
+  background-image: url('../img/home/camino-al-exito.jpg');
+}
+
+.home-slider .ns_slideContent.bg-3 {
+  background-image: url('../img/home/estrategia-de-negocios.jpg');
+}
+
+.home-slider .ns_slideContent.bg-4 {
+  background-image: url('../img/home/logra-tus-suenos.jpg');
+}
+
+.home-slider .ns_slideContent.bg-5 {
+  background-image: url('../img/home/lo-que-puedo-ser.jpg');
+}*/
 
 #home .logo img{
   margin: 0 auto;
@@ -96,28 +170,90 @@ h1 {
     Section 2
 ================================================== */
 #section2 {
-
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
 }
 
-#section2 .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+/* ==================================================
+    Jeunesse
+================================================== */
+#jeunesse {
+  background-color: #ecf2f5;
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
 }
 
-#section2 .video-container iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+#jeunesse .about {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#jeunesse .video-jeunesse {
+  margin-top: 30px;
+}
+
+/* ==================================================
+    Products
+================================================== */
+#products {
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
+#products .product {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#products .product.product-right{
+  text-align: right;
+}
+
+#products .product.product-left{
+  text-align: left;
+}
+
+#products .product .prod-img {
+  margin: 0 auto;
+}
+
+/* ==================================================
+  Compensation
+================================================== */
+#compensation {
+  background-color: #ecf2f5;
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
+/* ==================================================
+  Industry
+================================================== */
+#industry {
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
+#industry h3 {
+  color: #18315A;
+}
+
+#industry .testimonials {
+  margin-bottom: 40px;
 }
 
 /* ==================================================
     Join us
 ================================================== */
+#join-us {
+  background-color: #060505;
+  padding-top: 30px;
+  border-bottom: 1px solid #d7d8d9;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
 #join-us .tta-photos {
+  border: 6px white solid;
   line-height: 0;
   -webkit-column-count: 3;
   -webkit-column-gap:   0px;
@@ -151,52 +287,14 @@ h1 {
 }
 
 /* ==================================================
-    Products
-================================================== */
-#products .product {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-#products .product.product-right{
-  text-align: right;
-}
-
-#products .product.product-left{
-  text-align: left;
-}
-
-#products .product .prod-img {
-  margin: 0 auto;
-}
-
-/* ==================================================
-  Compensation
-================================================== */
-#compensation p.medium {
-  text-align: center;
-}
-
-#compensation .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-#compensation .video-container iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* ==================================================
     About-us
 ================================================== */
-#about-us p.medium {
-  font-size: 24px;
+#about-us {
+  padding-bottom: 0;
+}
+
+#about-us .team {
+  margin-bottom: 40px;
 }
 
 #about-us .team .logo-team {
@@ -217,21 +315,55 @@ h1 {
   padding: 50px 0;
 }
 
-#about-us .why-tta .dot {
+#about-us .why-tta ul li {
   font-size: 18px;
 }
 
-#about-us .why-tta .dot img {
-  max-width: 20px;
-  margin-right: 8px;
+#about-us .why-tta .money {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 12px;
+  color: #FFBF00;
 }
 
 /* ==================================================
-   Footer
+   Closure
 ================================================== */
+#closure {
+  padding: 15px;
+  background-color: #FFBF00;
+}
+
+#closure span {
+  font-size: 28px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+/* ==================================================
+   Contact
+================================================== */
+#contact {
+  padding : 40px 0 140px;
+  background-image: url('../img/contact/welcome.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#contact h2 {
+  margin: 0;
+  padding: 0 0 20px;
+}
+
 #contact .column {
   margin-bottom: 20px;
 }
+
 #tta-contact #contact-submit {
   background-color: #002A5C;
   color: #FFFFFF;
@@ -245,12 +377,14 @@ h1 {
    Footer
 ================================================== */
 #footer {
-  background-color: #474747;
+  color: #131619;
+  font-size: 14px;
+  background-color: #FFEAB5;
   padding: 14px 30px;
 }
 
 #footer span a {
-  color: #706F6F;
+  color: #E2655B;
   font-weight: bold;
 }
 
@@ -259,6 +393,6 @@ h1 {
 }
 
 #footer .social-icons i {
-  margin: 10px 12px;
+  margin: 5px 12px;
   color: #706F6F;
 }
