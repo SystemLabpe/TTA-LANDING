@@ -106,6 +106,11 @@ p.medium {
   text-align: center;
 }
 
+.tta-section .description {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .tta-section h3{
   font-size: 28px;
 }
@@ -181,11 +186,6 @@ p.medium {
   background-color: #ecf2f5;
   border-bottom: 1px solid #d7d8d9;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
-}
-
-#jeunesse .about {
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 #jeunesse .video-jeunesse {
@@ -309,17 +309,21 @@ p.medium {
   text-align: justify;
 }
 
-#about-us .why-tta {
+/* ==================================================
+   Why-TTA
+================================================== */
+
+#why-tta {
   background-color: #18315A;
   color: #FFFFFF;
   padding: 50px 0;
 }
 
-#about-us .why-tta ul li {
+#why-tta ul li {
   font-size: 18px;
 }
 
-#about-us .why-tta .money {
+#why-tta .money {
   font-size: 22px;
   font-weight: bold;
   margin: 0 12px;
