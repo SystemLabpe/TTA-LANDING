@@ -80,6 +80,13 @@
   /* ==================================================
    Footer
   ================================================== */
+  #footer.footer-ageless,  #footer.footer-lumnisce,
+  #footer.footer-vidacell,  #footer.footer-zen-bodi,
+  #footer.footer-finiti, #footer.footer-reserve,
+  #footer.footer-am-pm {
+    padding: 14px 30px 70px;
+  }
+
   #footer .copyright, #footer .social-icons {
     text-align: center;
   }

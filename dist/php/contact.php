@@ -8,7 +8,8 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
-$admin_email = 'informes@topteamalliance.com'; // Your Email
+$admin_email = 'informes@topteamalliance.com';
+// $admin_email = 'jmosquera92r@gmail.com';
 $message_min_length = 20; // Min Message Length
 
 
@@ -20,10 +21,19 @@ class Contact_Form{
         $this->phone = stripslashes($details['phone']);
         $this->member_name = stripslashes($details['jeunesse-member-name']);
         $this->member_phone = stripslashes($details['jeunesse-member-phone']);
+        $this->comment = stripslashes($details['comment']);
+        $this->presentation = stripslashes($details['presentation']);
+
+        if($this->presentation == 1) {
+          $this->presentation = "* SI tuvo la oportunidad de ver una presentación.";
+        } else if ($this->presentation == 0){
+          $this->presentation = "* NO tuvo la oportunidad de ver una presentación.";
+        }
 
         $this->subject = 'PROSPECTO TOP TEAM ALLIANCE - Landing page';
         $this->message = "Información de prospecto\r\n\r\nNombre: ".$this->name."\r\nCorreo: "
-        .$this->email."\r\nCelular: ".$this->phone."\r\nMiembro que lo inivitó: ".$this->member_name." - ".$this->member_phone;
+        .$this->email."\r\nCelular: ".$this->phone."\r\nMiembro que lo inivitó: ".$this->member_name." - ".$this->member_phone
+        ."\r\n".$this->presentation."\r\n\r\nComentario:".$this->comment;
 
         $this->email_admin = $email_admin;
         $this->message_min_length = $message_min_length;

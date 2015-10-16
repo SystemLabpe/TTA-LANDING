@@ -18,6 +18,7 @@ function initMap() {
   var location_4 = new google.maps.LatLng(-12.098767, -77.057831);
   var location_5 = new google.maps.LatLng(-12.114796, -76.981396);
   var location_6 = new google.maps.LatLng(-12.115262, -77.046447);
+  var location_7 = new google.maps.LatLng(-12.098191, -76.975378);
   var center = new google.maps.LatLng(-12.0999736,-77.0144617);
 
   var mapOptions = {
@@ -57,6 +58,11 @@ function initMap() {
       title:"Royalty",
       map: map
   });
+  var marker_7 = new google.maps.Marker({
+      position: location_7,
+      title:"Sede Jockey Club",
+      map: map
+  });
 
   var contentString_1 = "<b>Sede Principal</b><br/>Morelli 344 San Borja";
   var contentString_2 = "<b>All Star Elite</b><br/>Juan de Aliaga 723 Magdalena";
@@ -64,6 +70,7 @@ function initMap() {
   var contentString_4 = "<b>All Star Elite</b><br/>Parque Acosta 161 San Isidro";
   var contentString_5 = "<b>Medical Alliance</b><br/>Monte flor 320 Chacarilla";
   var contentString_6 = "<b>Royalty</b><br/>Avenida del Ejército 612, Miraflores";
+  var contentString_7 = "<b>Sede Jockey Club</b><br/>Gimnasio VO2 ingreso puerta 4 a la derecha";
 
   var infowindow_1 = new google.maps.InfoWindow({
     content: contentString_1
@@ -83,6 +90,9 @@ function initMap() {
   var infowindow_6 = new google.maps.InfoWindow({
     content: contentString_6
   });
+  var infowindow_7 = new google.maps.InfoWindow({
+    content: contentString_7
+  });
 
   marker_1.addListener('click', function() {
     infowindow_1.open(map, marker_1);
@@ -101,6 +111,9 @@ function initMap() {
   });
   marker_6.addListener('click', function() {
     infowindow_6.open(map, marker_6);
+  });
+  marker_7.addListener('click', function() {
+    infowindow_7.open(map, marker_7);
   });
 }
 

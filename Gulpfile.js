@@ -85,12 +85,20 @@ gulp.task('wiredep', function () {
 // Comprime los archivos CSS y JS enlazados en el index.html
 // y los minifica.
 gulp.task('compress', function() {
-  gulp.src('./app/index.html')
+  gulp.src('./app/*.html')
   .pipe(useref.assets())
   .pipe(gulpif('*.js', uglify({mangle: false })))
   .pipe(gulpif('*.css', minifyCss()))
   .pipe(gulp.dest('./dist'));
 });
+
+// gulp.task('compress-products', function() {
+//   gulp.src('./app/*.html')
+//   .pipe(useref.assets())
+//   .pipe(gulpif('*.js', uglify({mangle: false })))
+//   .pipe(gulpif('*.css', minifyCss()))
+//   .pipe(gulp.dest('./dist'));
+// });
 
 gulp.task('img-optimize',function(){
   return gulp.src('./app/img/**')
@@ -105,7 +113,7 @@ gulp.task('img-optimize',function(){
 // Copia el contenido de los estáticos e index.html al directorio
 // de producción sin tags de comentarios
 gulp.task('copy', function() {
-  gulp.src('./app/index.html')
+  gulp.src('./app/*.html')
   .pipe(useref())
   .pipe(gulp.dest('./dist'));
   gulp.src('./app/css/icons/**')
@@ -118,6 +126,8 @@ gulp.task('copy', function() {
   // .pipe(gulp.dest('./dist/img'));
   gulp.src('./app/php/**')
   .pipe(gulp.dest('./dist/php'));
+  gulp.src('./app/pdf/**')
+  .pipe(gulp.dest('./dist/pdf'));
 });
 
 // Vigila cambios que se produzcan en el código

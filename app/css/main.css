@@ -72,6 +72,99 @@ p.medium {
 }
 
 /* ==================================================
+   Buttons
+================================================== */
+.btn-ageless {
+  margin: 10px 0 20px;
+  background-color: #469BB0;
+  color: #FFFFFF;
+}
+
+.btn-ageless:hover, .btn-ageless:focus {
+  background-color: #87C9E1;
+  color: #FFFFFF;
+}
+
+.btn-luminesce {
+  margin: 10px 0 20px;
+  background-color: #002A5C;
+  color: #FFFFFF;
+}
+
+.btn-luminesce:hover, .btn-luminesce:focus {
+  background-color: #5584BB;
+  color: #FFFFFF;
+}
+
+.btn-vidacell {
+  margin: 10px 0 20px;
+  background-color: #E9CA0D;
+  color: #FFFFFF;
+}
+
+.btn-vidacell:hover, .btn-vidacell:focus {
+  background-color: #ECDD2C;
+  color: #FFFFFF;
+}
+
+.btn-zen-bodi {
+  margin: 10px 0 20px;
+  background-color: #B81E20;
+  color: #FFFFFF;
+}
+
+.btn-zen-bodi:hover, .btn-zen-bodi:focus {
+  background-color: #A56367;
+  color: #FFFFFF;
+}
+
+.btn-finiti {
+  margin: 10px 0 20px;
+  background-color: #DD0977;
+  color: #FFFFFF;
+}
+
+.btn-finiti:hover, .btn-finiti:focus {
+  background-color: #D25E9A;
+  color: #FFFFFF;
+}
+
+.btn-reserve {
+  margin: 10px 0 20px;
+  background-color: #35004A;
+  color: #FFFFFF;
+}
+
+.btn-reserve:hover, .btn-reserve:focus {
+  background-color: #B960A0;
+  color: #FFFFFF;
+}
+
+.btn-am-pm {
+  margin: 10px 0 20px;
+  background-color: #EF2D24;
+  color: #FFFFFF;
+}
+
+.btn-am-pm:hover, .btn-am-pm:focus {
+  background-color: #F35B54;
+  color: #FFFFFF;
+}
+
+#back {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  background-color: #002A5C;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+body.am-pm #back {
+  background-color: #EF2D24;
+}
+/* ==================================================
    Videos
 ================================================== */
 .video-container {
@@ -107,8 +200,17 @@ p.medium {
 }
 
 .tta-section .description {
+  color: #18315A;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.tta-section .important {
+  color: #18315A;
+  font-weight: bold;
+  /*text-align: center;*/
+  /*margin-bottom: 30px;*/
 }
 
 .tta-section h3{
@@ -242,6 +344,32 @@ p.medium {
   margin-bottom: 40px;
 }
 
+#industry .backer {
+  margin-top: 35px;
+  text-align: center;
+}
+
+#industry .backer img {
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+#industry .backer h4 {
+  color: #18315A;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#industry .backer .job {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#industry .backer blockquote p {
+  font-size: 15px;
+}
+
 /* ==================================================
     Join us
 ================================================== */
@@ -339,6 +467,7 @@ p.medium {
 }
 
 #closure span {
+  display: block;
   font-size: 28px;
   color: #FFFFFF;
   font-weight: bold;
@@ -366,6 +495,14 @@ p.medium {
 
 #contact .column {
   margin-bottom: 20px;
+}
+
+#tta-contact .form-group {
+  margin-bottom: 8px;
+}
+
+#contact-response {
+  margin: 0;
 }
 
 #tta-contact #contact-submit {
@@ -398,5 +535,65 @@ p.medium {
 
 #footer .social-icons i {
   margin: 5px 12px;
+  color: #FFFFFF;
+}
+
+/* ==================================================
+   Products External
+================================================== */
+
+/* ==================================================
+    Header
+================================================== */
+#header img{
+  width: 100%;
+}
+
+/* ==================================================
+    Content
+================================================== */
+#content img {
+  margin: 0 auto;
+}
+
+/* ==================================================
+    Luminesce
+================================================== */
+.luminesce-product {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 2px solid #94A8BA;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
+/* ==================================================
+    AM PM
+================================================== */
+body.am-pm h2{
+  color: #EF2D24;
+}
+
+body.am-pm .description {
   color: #706F6F;
+}
+
+/* ==================================================
+    Sale
+================================================== */
+
+/* ==================================================
+   Footer
+================================================== */
+#footer.footer-lumnisce {
+  background-color: #002A5C;
+  color: #FFFFFF;
+}
+
+#footer.footer-am-pm {
+  background-color: #EF2D24;
+  color: #FFFFFF;
+}
+
+#footer.footer-am-pm span a {
+  color: #4C4C4C;
 }
