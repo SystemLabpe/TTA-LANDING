@@ -161,6 +161,10 @@ p.medium {
   border-radius: 5px;
 }
 
+body.ageless #back {
+  background-color: #469BB0;
+}
+
 body.am-pm #back {
   background-color: #EF2D24;
 }
@@ -557,6 +561,17 @@ body.am-pm #back {
 }
 
 /* ==================================================
+    Ageless
+================================================== */
+body.ageless h2{
+  color: #469BB0;
+}
+
+body.ageless .description {
+  color: #706F6F;
+}
+
+/* ==================================================
     Luminesce
 ================================================== */
 .luminesce-product {
@@ -584,6 +599,15 @@ body.am-pm .description {
 /* ==================================================
    Footer
 ================================================== */
+#footer.footer-ageless {
+  background-color: #469BB0;
+  color: #FFFFFF;
+}
+
+#footer.footer-ageless span a {
+  color: #002A5C;
+}
+
 #footer.footer-lumnisce {
   background-color: #002A5C;
   color: #FFFFFF;
@@ -597,3 +621,4 @@ body.am-pm .description {
 #footer.footer-am-pm span a {
   color: #4C4C4C;
 }
+
