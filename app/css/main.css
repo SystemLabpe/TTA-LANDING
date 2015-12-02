@@ -74,8 +74,12 @@ p.medium {
 /* ==================================================
    Buttons
 ================================================== */
-.btn-ageless {
+.btn-detail {
   margin: 10px 0 20px;
+}
+
+.btn-ageless {
+  /*margin: 10px 0 20px;*/
   background-color: #469BB0;
   color: #FFFFFF;
 }
@@ -86,7 +90,7 @@ p.medium {
 }
 
 .btn-luminesce {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #002A5C;
   color: #FFFFFF;
 }
@@ -97,7 +101,7 @@ p.medium {
 }
 
 .btn-vidacell {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #E9CA0D;
   color: #FFFFFF;
 }
@@ -108,7 +112,7 @@ p.medium {
 }
 
 .btn-zen-bodi {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #B81E20;
   color: #FFFFFF;
 }
@@ -119,7 +123,7 @@ p.medium {
 }
 
 .btn-finiti {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #DD0977;
   color: #FFFFFF;
 }
@@ -130,7 +134,7 @@ p.medium {
 }
 
 .btn-reserve {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #35004A;
   color: #FFFFFF;
 }
@@ -141,7 +145,7 @@ p.medium {
 }
 
 .btn-am-pm {
-  margin: 10px 0 20px;
+  /*margin: 10px 0 20px;*/
   background-color: #EF2D24;
   color: #FFFFFF;
 }
@@ -165,8 +169,24 @@ body.ageless #back {
   background-color: #469BB0;
 }
 
+body.zenbodi #back {
+  background-color: #B81E20;
+}
+
+body.finiti #back {
+  background-color: #DD0977;
+}
+
+body.reserve #back {
+  background-color: #35004A;
+}
+
 body.am-pm #back {
   background-color: #EF2D24;
+}
+
+.col-pdf {
+  margin-top: 30px;
 }
 /* ==================================================
    Videos
@@ -444,7 +464,6 @@ body.am-pm #back {
 /* ==================================================
    Why-TTA
 ================================================== */
-
 #why-tta {
   background-color: #18315A;
   color: #FFFFFF;
@@ -546,6 +565,128 @@ body.am-pm #back {
    Products External
 ================================================== */
 
+  /* ==============Testimonial=============== */
+  #testimonials .testimonials-gallery {
+    position:relative;
+    margin:0 auto;
+    width:100%;
+    border-radius:20px;
+  }
+
+  #testimonials .testimonials-gallery .big-image{
+    width:100%;
+    height:470px;
+    margin:0 auto;
+    position:relative;
+  }
+
+  #testimonials .testimonials-gallery .big-image img{
+    max-width: 100%;
+    opacity:0;
+    position:absolute;
+    left:0;
+    right: 0;
+    top:0;
+    margin: 0 auto;
+    transition: opacity 350ms;
+    box-shadow:0 1px 20px 1px rgba(0,0,0,0.7);
+  }
+
+  /*Selected image display*/
+  #testimonials .testimonials-gallery .big-image img:target{
+    opacity:1;
+  }
+
+  /*on select image display none the default image*/
+  #testimonials .testimonials-gallery .big-image img:target ~ img#default{
+    opacity:0;
+  }
+
+  /*Show Default Image in first load*/
+  #testimonials .testimonials-gallery .big-image img#default{
+    opacity:1;
+  }
+
+  /***Button***/
+  #testimonials .testimonials-gallery .button{
+    font-weight:bold;
+    font-size:30px;
+    display:inline-block;
+    transform:scale(1,1.5);
+    padding:3px 10px;
+    border-radius: 5px;
+  }
+
+  #testimonials .testimonials-gallery .btn-control {
+    position:absolute;
+    top:508px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+
+  #testimonials .testimonials-gallery .prev{
+    left:0;
+  }
+
+  #testimonials .testimonials-gallery .next{
+    right:0;
+  }
+
+  /***move thumbs on click on buttons***/
+  #testimonials .testimonials-gallery .prev:active ~ .thumbs  ul{
+    transform:translateX(0%);
+    transition:3s all;
+  }
+
+  #testimonials .testimonials-gallery  .next:active ~ .thumbs  ul{
+    transform:translateX(-90%);
+    transition:3s all;
+  }
+
+  /***thumbs***/
+  #testimonials .testimonials-gallery .thumbs{
+    overflow:hidden;
+    white-space:nowrap;
+    margin:0 45px;
+  }
+
+  #testimonials .testimonials-gallery .thumbs ul{
+    float:left;
+    transition:999999s all;
+    transform:translateX(0);
+  }
+
+  #testimonials .testimonials-gallery .thumbs li{
+    display:inline-block;
+    margin-right:3px;
+  }
+
+  #testimonials .testimonials-gallery .thumbs li a:hover{
+    opacity:1;
+  }
+
+  #testimonials .testimonials-gallery .thumbs li a{
+    opacity:0.85;
+  }
+
+  #testimonials .testimonials-gallery .thumbs li a:focus{
+    opacity:1;
+  }
+
+  #testimonials .testimonials-gallery .thumbs li img{
+    width:128px;
+    max-height: 120px;
+  }
+
+  /* ==============Testimonial=============== */
+  .conditions {
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+
+
 /* ==================================================
     Header
 ================================================== */
@@ -571,6 +712,20 @@ body.ageless .description {
   color: #706F6F;
 }
 
+.price {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+body.ageless .price .amount {
+  color: #469BB0;
+  font-weight: bold;
+}
+
+body.ageless .testimonials-gallery .btn-control {
+  background-color: #469BB0;
+}
+
 /* ==================================================
     Luminesce
 ================================================== */
@@ -581,6 +736,80 @@ body.ageless .description {
   box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
 }
 
+body.luminesce .price .amount {
+  color: #18315A;
+  font-weight: bold;
+}
+
+body.luminesce .testimonials-gallery .btn-control {
+  background-color: #002A5C;
+  top: 497px !important;
+}
+
+/* ==================================================
+    Zen Bodi
+================================================== */
+.zenbodi-product {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 2px solid #94A8BA;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(255,255,255,.8);
+}
+
+body.zenbodi h2{
+  color: #B81E20;
+}
+
+body.zenbodi .description {
+  color: #706F6F;
+}
+
+body.zenbodi .price .amount {
+  color: #B81E20;
+  font-weight: bold;
+}
+
+body.zenbodi .testimonials-gallery .btn-control {
+  background-color: #B81E20;
+  /*top: 497px !important;*/
+}
+
+/* ==================================================
+    Finiti
+================================================== */
+body.finiti h2{
+  color: #DD0977;
+}
+
+body.finiti .description {
+  color: #706F6F;
+}
+
+body.finiti .price .amount {
+  color: #DD0977;
+  font-weight: bold;
+}
+
+/* ==================================================
+    RESERVE
+================================================== */
+body.reserve h2{
+  color: #35004A;
+}
+
+body.reserve .description {
+  color: #706F6F;
+}
+
+body.reserve .price .amount {
+  color: #35004A;
+  font-weight: bold;
+}
+
+body.reserve .testimonials-gallery .btn-control {
+  background-color: #35004A;
+  top: 497px !important;
+}
 /* ==================================================
     AM PM
 ================================================== */
@@ -590,6 +819,11 @@ body.am-pm h2{
 
 body.am-pm .description {
   color: #706F6F;
+}
+
+body.am-pm .price .amount {
+  color: #EF2D24;
+  font-weight: bold;
 }
 
 /* ==================================================
@@ -608,8 +842,31 @@ body.am-pm .description {
   color: #002A5C;
 }
 
+#footer.footer-zenbodi {
+  background-color: #B81E20;
+  color: #FFFFFF;
+}
+
+#footer.footer-zenbodi span a {
+  color: #002A5C;
+}
+
+#footer.footer-finiti {
+  background-color: #DD0977;
+  color: #FFFFFF;
+}
+
+#footer.footer-finiti span a {
+  color: #002A5C;
+}
+
 #footer.footer-lumnisce {
   background-color: #002A5C;
+  color: #FFFFFF;
+}
+
+#footer.footer-reserve {
+  background-color: #35004A;
   color: #FFFFFF;
 }
 

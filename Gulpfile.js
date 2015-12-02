@@ -92,6 +92,14 @@ gulp.task('compress', function() {
   .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('compress-index', function() {
+  gulp.src('./app/index.html')
+  .pipe(useref.assets())
+  .pipe(gulpif('*.js', uglify({mangle: false })))
+  .pipe(gulpif('*.css', minifyCss()))
+  .pipe(gulp.dest('./dist'));
+});
+
 // gulp.task('compress-products', function() {
 //   gulp.src('./app/*.html')
 //   .pipe(useref.assets())
