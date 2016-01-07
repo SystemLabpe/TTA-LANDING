@@ -634,7 +634,7 @@ body.am-pm #back {
 
   /***move thumbs on click on buttons***/
   #testimonials .testimonials-gallery .prev:active ~ .thumbs  ul{
-    transform:translateX(0%);
+    transform:translateX(1%);
     transition:3s all;
   }
 
